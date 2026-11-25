@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SSTI Handlebars Lab</title>
+  <style>
+    body {
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      max-width: 650px;
+      margin: 100px auto;
+    }
+    textarea {
+      width: 100%;
+      height: 140px;
+      padding: 12px;
+      background: #1e293b;
+      color: #38bdf8;
+      border: 1px solid #475569;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #0284c7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>SSTI Handlebars Lab</h1>
+  <p>Introduce una plantilla para renderizar:</p>
+
+  <form action="/render" method="POST">
+    <textarea name="template">{{username}}</textarea>
+    <button type="submit">Renderizar</button>
+  </form>
+</body>
+</html>
